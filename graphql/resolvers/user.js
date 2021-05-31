@@ -2,8 +2,6 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { UserInputError } = require("apollo-server");
 
-const { SECRET_KEY } = require("../../config");
-
 const User = require("../../models/user");
 const Problem = require("../../models/problem");
 const UserProblem = require("../../models/UserProblems");
@@ -14,7 +12,7 @@ const {
   validateLoginInput,
 } = require("../../utils/validators");
 const {userAuth} = require("../../utils/check-auth");
-
+const SECRET_KEY = process.env.SECRET_KEY;
 
 //TODO Make better roles / privilages system
 

@@ -2,12 +2,11 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { UserInputError} = require("apollo-server");
 
-const { SECRET_KEY } = require("../../config");
 const Admin = require("../../models/admin");
 const { validateRegisterInput, validateLoginInput } = require('../../utils/validators')
 
 const {adminAuth} = require("../../utils/check-auth");
-
+const SECRET_KEY = process.env.SECRET_KEY;
 
 function generateToken(user){
     return jwt.sign(
