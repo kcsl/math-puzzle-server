@@ -1,7 +1,12 @@
 const { AuthenticationError } = require('apollo-server')
 
 const jwt = require('jsonwebtoken');
+
+//  uncomment line before commit
 const SECRET_KEY = process.env.SECRET_KEY;
+
+// comment line befor commit
+// const { SECRET_KEY } = require("../config")
 
 function userAuth(context){
     //context = { ... headers }

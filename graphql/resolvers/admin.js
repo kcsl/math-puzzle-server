@@ -6,7 +6,12 @@ const Admin = require("../../models/admin");
 const { validateRegisterInput, validateLoginInput } = require('../../utils/validators')
 
 const {adminAuth} = require("../../utils/check-auth");
+
+//  uncomment line before commit
 const SECRET_KEY = process.env.SECRET_KEY;
+
+// comment line befor commit
+// const { SECRET_KEY } = require("../../config")
 
 function generateToken(user){
     return jwt.sign(

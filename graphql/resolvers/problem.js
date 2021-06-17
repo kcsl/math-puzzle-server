@@ -5,8 +5,7 @@ const {adminAuth} = require("../../utils/check-auth");
 // * Adds problem part in database
 async function addPart(part, ProblemID, index) {
   const newPart = new Part({
-    question: part.question,
-    answer: part.answer,
+    ...part,
     index,
     ProblemID,
   });

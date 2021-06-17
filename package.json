@@ -1,24 +1,33 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "serve" : "node index"
+    "serve": "node index",
+    "dev" : "nodemon index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.22.2",
+    "apollo-server": "^2.25.0",
     "bcryptjs": "^2.4.3",
     "graphql": "^15.5.0",
     "jsonwebtoken": "^8.5.1",
-    "katex": "^0.13.3",
-    "mongoose": "^5.12.3"
+    "katex": "^0.13.11",
+    "mongoose": "^5.12.12"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcsl/math-puzzle-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kcsl/math-puzzle-server/issues"
+  },
+  "homepage": "https://github.com/kcsl/math-puzzle-server#readme",
+  "description": ""
 }

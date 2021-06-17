@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const typeDefs = require("./graphql/typeDefs")
 const resolvers = require("./graphql/resolvers")
 const MONGODB = process.env.MONGODB;
+// const {MONGODB} = require("./config")
 
 const PORT = process.env.PORT || 5000
 

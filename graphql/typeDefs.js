@@ -1,13 +1,33 @@
 const { gql } = require("apollo-server");
 
 module.exports = gql`
-  type Part {
+  enum PartType {
+    SLIDE
+    QUESTION
+  }
+
+  interface Part {
     id: ID!
     ProblemID: ID!
     index: Int!
+    completed: Boolean!
+  }
+
+  type Slide implements Part {
+    id: ID!
+    ProblemID: ID!
+    index: Int!
+    completed: Boolean!
+    body: String!
+  }
+
+  type Question implements Part {
+    id: ID!
+    ProblemID: ID!
+    index: Int!
+    completed: Boolean!
     question: String!
     answer: String!
-    completed: Boolean
   }
 
   type Problem {
@@ -42,8 +62,9 @@ module.exports = gql`
   }
 
   input PartInput {
-    question: String!
-    answer: String!
+    question: String
+    answer: String
+    body: String
   }
 
   input ProblemInput {

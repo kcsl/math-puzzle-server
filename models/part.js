@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const partSchema = new Schema({
   question: String,
   answer: String,
+  body: String,
   index: Number,
   ProblemID: {
     type: Schema.Types.ObjectId,
