@@ -17,7 +17,7 @@ module.exports = gql`
     id: ID!
     ProblemID: ID!
     index: Int!
-    completed: Boolean!
+    completed: Boolean
     body: String!
   }
 
@@ -25,9 +25,10 @@ module.exports = gql`
     id: ID!
     ProblemID: ID!
     index: Int!
-    completed: Boolean!
+    completed: Boolean
     question: String!
     answer: String!
+    explanation: String
   }
 
   type Problem {
