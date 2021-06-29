@@ -6,6 +6,7 @@ const partSchema = new Schema({
   question: String,
   answer: String,
   body: String,
+  explanation: String,
   index: Number,
   ProblemID: {
     type: Schema.Types.ObjectId,

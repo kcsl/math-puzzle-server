@@ -64,6 +64,7 @@ module.exports = gql`
   input PartInput {
     question: String
     answer: String
+    explanation: String
     body: String
   }
 
